@@ -21,7 +21,7 @@ with open("name.txt", "r") as in_file:
 print("Your name is", name)
 
 # Quick Program 3
-# Note that .strip() is unnecessary since int() handles that whitespace
+
 in_file = open("numbers.txt", "r")
 number1 = int(in_file.readline())
 number2 = int(in_file.readline())

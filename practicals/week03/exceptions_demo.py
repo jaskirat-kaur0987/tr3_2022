@@ -17,7 +17,23 @@ except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
 
-# 1.When will a ValueError occur?
-# Answer - Except the integer, it will show ValueError on any other input.
-# 2.When will a ZeroDivisionError occur?
-# Answer - ZeroDivision only occur when we put denominator as zero.
+
+def get_valid_denominator():
+    # to avoid the possibility of ZeroDivisionError
+    denominator = int(input("Enter a valid denominator: "))
+    while denominator <= 0:
+        denominator = int(input("Enter a valid denominator: "))
+    return denominator
+
+
+"""
+
+1.When will a ValueError occur? 
+Answer - Except the integer, it will show ValueError on any other input. 
+2.When will a ZeroDivisionError occur? 
+Answer - ZeroDivision only occur when we put denominator as zero.
+ 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
+Answer- To avoid the possibility of ZeroDivisionError,
+I added function which passes denominator as a parameter and make sure it's not zero. 
+
+"""
